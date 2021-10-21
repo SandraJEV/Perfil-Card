@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%; /*Al hacer esto facilita el uso de rem  */
+}
+body{
+    background-image: linear-gradient( to right, #C2FFD8 10%, #465EFB 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.card{
+    width: 40rem;
+    height: 42rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.13);
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    top: 2%;
+    width: 95%;
+    height: 12rem;
+    z-index: 1; /* Esto es lo que se apilara */
+    border-radius: 10px;
+    background-image: linear-gradient( to right, #74b7ee 10%, #537af8 100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    transform-origin: bottom;
+    transition: transform .8s;
+}
+.card:hover::before{
+    transform: translateY(-5px) scaleY(1.2);
+}
+
+.card__img{
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    z-index: 5;
+    transform: translateY(5rem);
+    overflow: hidden;
+    position: absolute;
+}
+
+.card__container {
+    width: 100%;
+    height: 100%;
+    transform: translateY(10rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.card__container h2{
+    font-size: 28px;
+}
+.card__social{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+}
+.card__social p{
+    margin: 0 0;
+}
+.card__social-follow {
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    text-align: center;
+}
+.card__social-follow:hover{
+    background-color: rgba(75, 108, 251, 0.233);
+}
+
+.card__button{
+    margin-top: 1rem;
+    width: 35%;
+    height: 3rem;
+    border-radius: .5rem;
+    border-color: rgba(10, 87, 212, 0.849);
+    background-color: rgba(36, 100, 184, 0.74);
+    font-weight:bold;
+    color: seashell;
+    cursor: pointer;
+}
+
+.card__button:hover{
+    color: rgb(88, 216, 146);
+}
