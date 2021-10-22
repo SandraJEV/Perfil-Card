@@ -18,8 +18,8 @@ body{
 
 
 .card{
-    width: 40rem;
-    height: 42rem;
+    width: 38rem;
+    height: 39rem;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     position: relative;
@@ -47,19 +47,21 @@ body{
 }
 
 .card__img{
-    width: 16rem;
-    height: 16rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
     z-index: 5;
     transform: translateY(5rem);
     overflow: hidden;
     position: absolute;
+    border: 10px solid white;
+    background-color: white;
 }
 
 .card__container {
     width: 100%;
     height: 100%;
-    transform: translateY(10rem);
+    transform: translateY(8rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,7 +77,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .card__social p{
     margin: 0 0;
@@ -102,5 +104,5 @@ body{
 }
 
 .card__button:hover{
-    color: rgb(88, 216, 146);
+    color: rgb(136, 243, 184);
 }
